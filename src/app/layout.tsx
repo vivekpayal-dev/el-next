@@ -9,23 +9,10 @@ export const metadata: Metadata = {
   description: "Home Page",
 };
 
-const rubik = Rubik({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-  variable: "--font-rubik",
-});
 const jost = Jost({
   subsets: ["latin"], 
   display: "swap", 
   variable: "--font-jost",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  weight: ["400", "600", "800"],
-  display: "swap",
-  variable: "--font-sora",
 });
 
 export default function RootLayout({

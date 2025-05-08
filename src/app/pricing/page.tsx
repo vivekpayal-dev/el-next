@@ -1,4 +1,3 @@
-import { MovingBorder } from "@/components/MovingBorder";
 import { lobby_pass, monthly_unlimited, single_pass } from "@/utils/config";
 import { Check } from "lucide-react";
 
@@ -8,7 +7,7 @@ export default function Pricing() {
       <h2 className="font-semibold text-3xl text-center text-white mt-5 mb-10">
         A Perfect Balance of Quality, Quantity & Price.
       </h2>
-      <div className="px-4 md:px-16  mx-auto mt-14">
+      <div className="container mx-auto mt-14">
         <div className="grid grid-cols-3 text-white">
           {single_pass.map((singlePass, idx) => {
             return (
@@ -27,9 +26,9 @@ export default function Pricing() {
                 </div>
                 <div className="px-6 py-6">
                   <ul className="flex flex-col gap-3">
-                    {singlePass.features.map((feature) => {
+                    {singlePass.features.map((feature, idx) => {
                       return (
-                        <li className="flex gap-3 item-center">
+                        <li key={idx} className="flex gap-3 item-center">
                           <div className="w-6 h-6 bg-clip-padding backdrop-filter backdrop-blur-lg rounded-full bg-white/30 flex items-center justify-center">
                             <Check size={16} />
                           </div>
@@ -59,9 +58,9 @@ export default function Pricing() {
                 </div>
                 <div className="px-6 py-6">
                   <ul className="flex flex-col gap-3">
-                    {monthPass.features.map((feature) => {
+                    {monthPass.features.map((feature, idx) => {
                       return (
-                        <li className="flex gap-3 item-center">
+                        <li className="flex gap-3 item-center" key={idx}>
                           <div className="w-6 h-6 bg-clip-padding backdrop-filter backdrop-blur-lg rounded-full bg-white/30 flex items-center justify-center shrink-0">
                             <Check size={16} />
                           </div>
@@ -91,9 +90,9 @@ export default function Pricing() {
                 </div>
                 <div className="px-6 py-6">
                   <ul className="flex flex-col gap-3">
-                    {lobbyPass.features.map((feature) => {
+                    {lobbyPass.features.map((feature, idx) => {
                       return (
-                        <li className="flex gap-3 item-center">
+                        <li className="flex gap-3 item-center" key={idx}>
                           <div className="w-6 h-6 bg-clip-padding backdrop-filter backdrop-blur-lg rounded-full bg-white/30 flex items-center justify-center shrink-0">
                             <Check size={16} />
                           </div>
