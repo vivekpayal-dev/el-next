@@ -8,7 +8,7 @@ export default function Pricing() {
       <h2 className="font-semibold text-3xl text-center text-white mt-5 mb-10">
         A Perfect Balance of Quality, Quantity & Price.
       </h2>
-      <div className="container mx-auto mt-14">
+      <div className="px-4 md:px-16  mx-auto mt-14">
         <div className="grid grid-cols-3 text-white">
           {single_pass.map((singlePass, idx) => {
             return (
